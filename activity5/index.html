@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenges</title>
+
+    <style>
+        .quote-card {
+            background: #FFF8F0;
+            border-left: 6px solid #F97316;
+            padding: 24px 28px;
+            max-width: 300px;
+            border-radius: 0 8px 8px 0;
+            font-family: Georgia, serif;
+            margin-bottom: 40px;
+        }
+
+        .quote-card blockquote {
+            margin: 0 0 12px;
+            font-size: 1rem;
+            color: #1C1917;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .quote-card cite {
+            font-style: normal;
+            font-family: Arial, sans-serif;
+            font-size: 0.78rem;
+            color: #78716C;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .stats {
+            display: flex;
+            background: #1E1B4B;
+            border-radius: 10px;
+            overflow: hidden;
+            width: fit-content;
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center;
+            padding: 20px 16px;
+            border-right: 1px solid #312E81;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .num {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #A5B4FC;
+            margin-bottom: 4px;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.7rem;
+            color: #818CF8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 260px;
+        }
+
+        .field label {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #1E3A5F;
+            letter-spacing: 0.5px;
+        }
+
+        .field input {
+            padding: 10px 14px;
+            border: 2px solid #CBD5E1;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background: #F8FAFC;
+            outline: none;
+        }
+
+        .field input:focus {
+            border-color: #3B82F6;
+            background: #EFF6FF;
+        }
+
+        .helper {
+            font-size: 0.72rem;
+            color: #64748B;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner {
+            background: #0f0f23;
+            padding: 28x 32px;
+            border-radius: 10px;
+            text-align: center;
+            width: 500px;
+            margin: 40px 0;
+        }
+
+        .banner h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+
+            background: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .banner p {
+            font-size: 0.82rem;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        .price-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 24px 28px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            margin: 40px auto;
+        }
+
+        .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #94A3B8;
+            margin-bottom: 8px;
+        }
+
+        .old-price {
+            font-size: 1rem;
+            color: #94A3B8;
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+
+        .new-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #16A34A;
+        }
+
+        .save-badge {
+            display: inline-block;
+            margin-top: 10px;
+            background: #DCFCE7;
+            color: #16A34A;
+            font-size: 0.72rem;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="quote-card">
+        <blockquote>
+            "The best way to learn CSS is to break things and rebuild them."
+        </blockquote>
+        <cite>— A Wise Developer</cite>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <span class="num">128</span>
+            <span class="label">Projects</span>
+        </div>
+
+        <div class="stat">
+            <span class="num">4.9</span>
+            <span class="label">Rating</span>
+        </div>
+
+        <div class="stat">
+            <span class="num">99%</span>
+            <span class="label">Uptime</span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+        <span class="helper">We'll never share your email.</span>
+    </div>
+    <div class="banner">
+        <h2>Make it Beautiful </h2>
+        <p>CSS gradients can be applied to text, not just backgrounds.</p>
+    </div>
+    <div class="price-card">
+        <p class="label">Premium Plan</p>
+        <p class="old-price">₱2,400/yr</p>
+        <p class="new-price">₱1,200/yr</p>
+        <span class="save-badge">Save 50%</span>
+</body>
+
+</html>
