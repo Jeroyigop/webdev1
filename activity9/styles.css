@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 25px clamp(16px, 4vw, 50px);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar__logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 40px);
+}
+
+.navbar__links a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(30px, 5vw, 60px);
+  align-items: flex-start;
+  padding: clamp(40px, 8vw, 100px) clamp(16px, 4vw, 50px);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.hero__text {
+  flex: 1.2 1 320px; 
+}
+
+.hero__panel {
+  flex: 1 1 280px; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero__desc {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.1rem);
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Info Cards */
+.info-card {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  padding: clamp(16px, 3vw, 24px);
+  border-radius: 6px;
+}
+
+.info-card__label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: inherit;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.info-card__value {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.info-card--accent {
+  background-color: #c96552;
+  color: #fff;
+  border-color: #c96552;
+}
+
+.skills {
+  padding: clamp(40px, 8vw, 80px) clamp(16px, 4vw, 50px);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 40px;
+}
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+}
+
+.skill-card {
+  background-color: #fff;
+  padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 30px);
+  word-break: break-word;
+}
+
+.skill-card--wide {
+  grid-column: span 2;
+}
+
+.skill-card__num {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.skill-card__name {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.skill-card__desc {
+  color: #666;
+}
+
+.contact__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.contact__label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #ffb499;
+  margin-bottom: 16px;
+}
+
+.contact__title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.contact__desc {
+  color: #aaa;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+
+.btn--light {
+  background-color: #fff;
+  color: #111;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 40px clamp(16px, 4vw, 50px);
+  background-color: #fff;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 40px);
+}
+
+/* Checkpoint 1:
+   The header and the link list are different containers in the DOM. Each container needs its own layout rule because `display: flex` only affects an element's direct children.
+*/
+
+/* Checkpoint 2:
+   The info cards were already stacking as block elements, but I added `display: flex` and `flex-direction: column` on `.hero__panel` so I could use `gap` for consistent vertical spacing between them.
+*/
+
+/* Checkpoint 3:
+   Using Grid for the skills cards is more maintainable because a single `grid-column: span 2` rule on the wide cards makes them larger. With only Flexbox, making specific cards wider would require custom widths or fragile hacks on each item.
+*/
+
+/* Checkpoint 4:
+   The contact section's children should simply stack vertically and be centered as text. That means regular block layout plus `text-align: center` is enough, so no flex container is needed there.
+*/
+
